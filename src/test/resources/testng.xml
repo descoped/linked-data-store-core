@@ -2,7 +2,7 @@
 <suite name="tests">
     <test name="default">
         <packages>
-            <package name="no.ssb.lds.*"/>
+            <package name="io.descoped.lds.*"/>
         </packages>
     </test>
 </suite>
