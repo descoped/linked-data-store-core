@@ -5,8 +5,8 @@ import io.descoped.lds.api.persistence.DocumentKey;
 import io.descoped.lds.api.persistence.json.JsonDocument;
 import io.descoped.lds.api.search.SearchIndex;
 import io.descoped.lds.api.specification.Specification;
-import no.ssb.saga.api.SagaNode;
-import no.ssb.saga.execution.adapter.Adapter;
+import no.cantara.saga.api.SagaNode;
+import no.cantara.saga.execution.adapter.Adapter;
 
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;

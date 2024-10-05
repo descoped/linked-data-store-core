@@ -2,10 +2,10 @@ module io.descoped.lds.core {
     requires io.descoped.lds.persistence.api;
     requires io.descoped.lds.search.api;
     requires io.descoped.dynamic.config;
-    requires no.ssb.concurrent.futureselector;
-    requires no.ssb.saga.api;
-    requires no.ssb.saga.execution;
-    requires no.ssb.sagalog;
+    requires no.cantara.concurrent.futureselector;
+    requires no.cantara.saga.api;
+    requires no.cantara.saga.execution;
+    requires no.cantara.sagalog;
     requires no.ssb.rawdata.api;
     requires de.huxhorn.sulky.ulid;
     requires jdk.unsupported;
@@ -36,7 +36,7 @@ module io.descoped.lds.core {
     uses io.descoped.lds.api.persistence.PersistenceInitializer;
     uses no.ssb.rawdata.api.RawdataClientInitializer;
     uses io.descoped.lds.api.search.SearchIndexProvider;
-    uses no.ssb.sagalog.SagaLogInitializer;
+    uses no.cantara.sagalog.SagaLogInitializer;
 
     exports io.descoped.lds.core;
     exports io.descoped.lds.test.server; // Needed to run tests in IntelliJ

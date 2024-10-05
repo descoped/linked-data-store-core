@@ -6,9 +6,9 @@ import io.descoped.lds.api.persistence.Transaction;
 import io.descoped.lds.api.persistence.json.JsonDocument;
 import io.descoped.lds.api.persistence.reactivex.RxJsonPersistence;
 import io.descoped.lds.api.specification.Specification;
-import no.ssb.saga.api.SagaNode;
-import no.ssb.saga.execution.adapter.AbortSagaException;
-import no.ssb.saga.execution.adapter.Adapter;
+import no.cantara.saga.api.SagaNode;
+import no.cantara.saga.execution.adapter.AbortSagaException;
+import no.cantara.saga.execution.adapter.Adapter;
 
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;

@@ -2,9 +2,9 @@ package io.descoped.lds.core.txlog;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import io.descoped.lds.core.saga.SagaInput;
+import no.cantara.saga.api.SagaNode;
+import no.cantara.saga.execution.adapter.Adapter;
 import no.ssb.rawdata.api.RawdataProducer;
-import no.ssb.saga.api.SagaNode;
-import no.ssb.saga.execution.adapter.Adapter;
 
 import java.util.Map;
 

@@ -1,10 +1,10 @@
 package io.descoped.lds.core.saga;
 
-import no.ssb.concurrent.futureselector.FutureSelector;
-import no.ssb.concurrent.futureselector.SelectableFuture;
-import no.ssb.concurrent.futureselector.Selection;
-import no.ssb.saga.execution.SagaHandoffControl;
-import no.ssb.saga.execution.SagaHandoffResult;
+import no.cantara.concurrent.futureselector.FutureSelector;
+import no.cantara.concurrent.futureselector.SelectableFuture;
+import no.cantara.concurrent.futureselector.Selection;
+import no.cantara.saga.execution.SagaHandoffControl;
+import no.cantara.saga.execution.SagaHandoffResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

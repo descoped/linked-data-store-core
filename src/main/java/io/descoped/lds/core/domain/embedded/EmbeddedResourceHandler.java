@@ -20,10 +20,10 @@ import io.undertow.server.HttpHandler;
 import io.undertow.server.HttpServerExchange;
 import io.undertow.util.HeaderValues;
 import io.undertow.util.Headers;
-import no.ssb.concurrent.futureselector.SelectableFuture;
-import no.ssb.saga.api.Saga;
-import no.ssb.saga.execution.SagaHandoffResult;
-import no.ssb.saga.execution.adapter.AdapterLoader;
+import no.cantara.concurrent.futureselector.SelectableFuture;
+import no.cantara.saga.api.Saga;
+import no.cantara.saga.execution.SagaHandoffResult;
+import no.cantara.saga.execution.adapter.AdapterLoader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

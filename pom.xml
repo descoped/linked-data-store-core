@@ -57,6 +57,11 @@
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
         </repository>
+        <repository>
+            <id>cantara-releases</id>
+            <name>Cantara Release Repository</name>
+            <url>https://mvnrepo.cantara.no/content/repositories/releases/</url>
+        </repository>
     </repositories>
 
     <dependencyManagement>
@@ -94,28 +99,28 @@
         </dependency>
 
         <dependency>
-            <groupId>no.ssb.concurrent.futureselector</groupId>
+            <groupId>no.cantara.concurrent.futureselector</groupId>
             <artifactId>future-selector</artifactId>
         </dependency>
         <dependency>
-            <groupId>no.ssb.saga</groupId>
-            <artifactId>distributed-saga-api</artifactId>
+            <groupId>no.cantara.saga</groupId>
+            <artifactId>saga-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>no.ssb.saga</groupId>
-            <artifactId>distributed-saga-execution</artifactId>
+            <groupId>no.cantara.saga</groupId>
+            <artifactId>saga-execution</artifactId>
         </dependency>
         <dependency>
-            <groupId>no.ssb.saga</groupId>
+            <groupId>no.cantara.saga</groupId>
             <artifactId>sagalog-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>no.ssb.saga</groupId>
+            <groupId>no.cantara.saga</groupId>
             <artifactId>sagalog-postgres</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>no.ssb.saga</groupId>
+            <groupId>no.cantara.saga</groupId>
             <artifactId>sagalog-file</artifactId>
             <scope>test</scope>
         </dependency>

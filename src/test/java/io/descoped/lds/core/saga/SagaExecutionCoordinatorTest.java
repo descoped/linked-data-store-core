@@ -4,10 +4,10 @@ import io.descoped.lds.test.ConfigurationOverride;
 import io.descoped.lds.test.client.TestClient;
 import io.descoped.lds.test.server.TestServer;
 import io.descoped.lds.test.server.TestServerListener;
-import no.ssb.saga.execution.SagaExecutionTraversalContext;
-import no.ssb.sagalog.SagaLog;
-import no.ssb.sagalog.SagaLogOwner;
-import no.ssb.sagalog.SagaLogPool;
+import no.cantara.saga.execution.SagaExecutionTraversalContext;
+import no.cantara.sagalog.SagaLog;
+import no.cantara.sagalog.SagaLogOwner;
+import no.cantara.sagalog.SagaLogPool;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -32,7 +32,7 @@ public class SagaExecutionCoordinatorTest {
     @Test
     @ConfigurationOverride({
             "saga.recovery.enabled", "false",
-            "sagalog.provider", "no.ssb.sagalog.file.FileSagaLogInitializer",
+            "sagalog.provider", "no.cantara.sagalog.file.FileSagaLogInitializer",
             "saga.number-of-logs", "1",
             "saga.commands.enabled", "true"
     })
@@ -50,7 +50,7 @@ public class SagaExecutionCoordinatorTest {
     @Test
     @ConfigurationOverride({
             "saga.recovery.enabled", "false",
-            "sagalog.provider", "no.ssb.sagalog.memory.MemorySagaLogInitializer",
+            "sagalog.provider", "no.cantara.sagalog.memory.MemorySagaLogInitializer",
             "saga.number-of-logs", "1",
             "saga.commands.enabled", "true"
     })
@@ -86,7 +86,7 @@ public class SagaExecutionCoordinatorTest {
     @Test
     @ConfigurationOverride({
             "saga.recovery.enabled", "false",
-            "sagalog.provider", "no.ssb.sagalog.memory.MemorySagaLogInitializer",
+            "sagalog.provider", "no.cantara.sagalog.memory.MemorySagaLogInitializer",
             "saga.number-of-logs", "1",
             "saga.commands.enabled", "true"
     })

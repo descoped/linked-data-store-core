@@ -4,15 +4,15 @@ import io.descoped.lds.api.persistence.json.JsonTools;
 import io.descoped.lds.test.ConfigurationOverride;
 import io.descoped.lds.test.server.TestServer;
 import io.descoped.lds.test.server.TestServerListener;
-import no.ssb.concurrent.futureselector.SelectableFuture;
-import no.ssb.saga.api.Saga;
-import no.ssb.saga.api.SagaNode;
-import no.ssb.saga.execution.SagaHandoffResult;
-import no.ssb.saga.execution.adapter.AbortSagaException;
-import no.ssb.saga.execution.adapter.Adapter;
-import no.ssb.sagalog.SagaLog;
-import no.ssb.sagalog.SagaLogId;
-import no.ssb.sagalog.SagaLogPool;
+import no.cantara.concurrent.futureselector.SelectableFuture;
+import no.cantara.saga.api.Saga;
+import no.cantara.saga.api.SagaNode;
+import no.cantara.saga.execution.SagaHandoffResult;
+import no.cantara.saga.execution.adapter.AbortSagaException;
+import no.cantara.saga.execution.adapter.Adapter;
+import no.cantara.sagalog.SagaLog;
+import no.cantara.sagalog.SagaLogId;
+import no.cantara.sagalog.SagaLogPool;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -34,7 +34,7 @@ public class SagaRecoveryTriggerTest {
     @Test
     @ConfigurationOverride({
             "saga.recovery.enabled", "false",
-            "sagalog.provider", "no.ssb.sagalog.memory.MemorySagaLogInitializer"
+            "sagalog.provider", "no.cantara.sagalog.memory.MemorySagaLogInitializer"
     })
     public void thatSagaRecoveryIsTriggeredWhenThereIsAnIncompleteSagaInLog() throws InterruptedException {
         SagaExecutionCoordinator sec = server.getApplication().getSec();

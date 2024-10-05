@@ -4,8 +4,8 @@ import com.fasterxml.jackson.databind.JsonNode;
 import io.descoped.lds.api.persistence.PersistenceDeletePolicy;
 import io.descoped.lds.api.persistence.Transaction;
 import io.descoped.lds.api.persistence.reactivex.RxJsonPersistence;
-import no.ssb.saga.api.SagaNode;
-import no.ssb.saga.execution.adapter.Adapter;
+import no.cantara.saga.api.SagaNode;
+import no.cantara.saga.execution.adapter.Adapter;
 
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;

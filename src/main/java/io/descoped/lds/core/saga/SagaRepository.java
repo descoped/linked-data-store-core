@@ -10,8 +10,8 @@ import io.descoped.lds.core.search.UpdateIndexSagaAdapter;
 import io.descoped.lds.core.txlog.AppendTxLogAdapter;
 import io.descoped.lds.core.txlog.DeleteTxLogAdapter;
 import io.descoped.lds.core.txlog.TxlogRawdataPool;
-import no.ssb.saga.api.Saga;
-import no.ssb.saga.execution.adapter.AdapterLoader;
+import no.cantara.saga.api.Saga;
+import no.cantara.saga.execution.adapter.AdapterLoader;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

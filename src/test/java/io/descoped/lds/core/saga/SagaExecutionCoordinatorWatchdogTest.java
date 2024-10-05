@@ -9,8 +9,8 @@ import io.descoped.lds.test.ConfigurationOverride;
 import io.descoped.lds.test.client.TestClient;
 import io.descoped.lds.test.server.TestServer;
 import io.descoped.lds.test.server.TestServerListener;
-import no.ssb.saga.api.Saga;
-import no.ssb.saga.execution.adapter.Adapter;
+import no.cantara.saga.api.Saga;
+import no.cantara.saga.execution.adapter.Adapter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
@@ -46,7 +46,7 @@ public class SagaExecutionCoordinatorWatchdogTest {
     @Test
     @ConfigurationOverride({
             "persistence.provider", "mem",
-            "sagalog.provider", "no.ssb.sagalog.memory.MemorySagaLogInitializer",
+            "sagalog.provider", "no.cantara.sagalog.memory.MemorySagaLogInitializer",
             "saga.number-of-logs", "50",
             "specification.schema", "spec/schemas/contact.json,spec/schemas/provisionagreement.json",
             "saga.threadpool.core", "15",
