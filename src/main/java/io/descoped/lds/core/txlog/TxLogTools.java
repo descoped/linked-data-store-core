@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import de.huxhorn.sulky.ulid.ULID;
 import io.descoped.lds.core.saga.SagaInput;
-import no.ssb.rawdata.api.RawdataMessage;
+import io.descoped.rawdata.api.RawdataMessage;
 import org.msgpack.jackson.dataformat.MessagePackFactory;
 
 import java.io.IOException;
@@ -20,7 +20,7 @@ public class TxLogTools {
 
     static final ObjectMapper mapper = new ObjectMapper(new MessagePackFactory());
 
-    public static RawdataMessage.Builder sagaInputToTxEntry(RawdataMessage.Builder builder, SagaInput sagaInput) {
+    public static RawdataMessage sagaInputToTxEntry(SagaInput sagaInput) {
         ObjectNode meta = mapper.createObjectNode();
         meta.put("method", sagaInput.method());
         meta.put("schema", sagaInput.schema());
@@ -37,12 +37,13 @@ public class TxLogTools {
 
         String uri = String.format("%s/%s/%s", sagaInput.entity(), sagaInput.resourceId(), Date.from(sagaInput.version().toInstant()).getTime());
 
+        RawdataMessage.Builder builder = RawdataMessage.builder();
         builder.ulid(ULID.parseULID(sagaInput.txId()))
                 .position(uri);
         if (sagaInput.data() != null) {
             builder.put("data", toBytes(sagaInput.data()));
         }
-        return builder.put("meta", toBytes(meta));
+        return builder.put("meta", toBytes(meta)).build();
     }
 
     public static SagaInput txEntryToSagaInput(RawdataMessage message) {

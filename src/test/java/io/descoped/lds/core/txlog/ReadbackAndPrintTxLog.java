@@ -5,9 +5,9 @@ import io.descoped.config.DynamicConfiguration;
 import io.descoped.config.StoreBasedDynamicConfiguration;
 import io.descoped.lds.api.persistence.json.JsonTools;
 import io.descoped.lds.core.UndertowApplication;
-import no.ssb.rawdata.api.RawdataClient;
-import no.ssb.rawdata.api.RawdataConsumer;
-import no.ssb.rawdata.api.RawdataMessage;
+import io.descoped.rawdata.api.RawdataClient;
+import io.descoped.rawdata.api.RawdataConsumer;
+import io.descoped.rawdata.api.RawdataMessage;
 import org.msgpack.jackson.dataformat.MessagePackFactory;
 
 import java.io.IOException;

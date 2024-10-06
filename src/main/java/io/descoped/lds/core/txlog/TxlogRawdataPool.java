@@ -1,8 +1,8 @@
 package io.descoped.lds.core.txlog;
 
-import no.ssb.rawdata.api.RawdataClient;
-import no.ssb.rawdata.api.RawdataMessage;
-import no.ssb.rawdata.api.RawdataProducer;
+import io.descoped.rawdata.api.RawdataClient;
+import io.descoped.rawdata.api.RawdataMessage;
+import io.descoped.rawdata.api.RawdataProducer;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

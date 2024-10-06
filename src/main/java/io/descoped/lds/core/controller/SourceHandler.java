@@ -6,10 +6,10 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import io.descoped.lds.api.persistence.json.JsonTools;
 import io.descoped.lds.core.txlog.TxLogTools;
 import io.descoped.lds.core.txlog.TxlogRawdataPool;
+import io.descoped.rawdata.api.RawdataMessage;
 import io.undertow.server.HttpHandler;
 import io.undertow.server.HttpServerExchange;
 import io.undertow.util.Headers;
-import no.ssb.rawdata.api.RawdataMessage;
 
 import java.nio.charset.StandardCharsets;
 

@@ -27,6 +27,8 @@ import io.descoped.lds.core.utils.LDSProviderConfigurator;
 import io.descoped.lds.graphql.GraphqlHttpHandler;
 import io.descoped.lds.graphql.jsonSchema.GraphQLToJsonConverter;
 import io.descoped.lds.graphql.schemas.GraphQLSchemaBuilder;
+import io.descoped.rawdata.api.RawdataClient;
+import io.descoped.rawdata.api.RawdataClientInitializer;
 import io.undertow.Handlers;
 import io.undertow.Undertow;
 import io.undertow.server.HttpHandler;
@@ -37,8 +39,6 @@ import io.undertow.util.StatusCodes;
 import no.cantara.concurrent.futureselector.SelectableThreadPoolExectutor;
 import no.cantara.sagalog.SagaLogInitializer;
 import no.cantara.sagalog.SagaLogPool;
-import no.ssb.rawdata.api.RawdataClient;
-import no.ssb.rawdata.api.RawdataClientInitializer;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -130,7 +130,7 @@ public class UndertowApplication {
             GraphQL graphQL = GraphQL.newGraphQL(schema).build();
 
             pathHandler.addExactPath("/graphiql", Handlers.resource(new ClassPathResourceManager(
-                    Thread.currentThread().getContextClassLoader(), "no/ssb/lds/graphql/graphiql"
+                    Thread.currentThread().getContextClassLoader(), "io/descoped/lds/graphql/graphiql"
             )).setDirectoryListingEnabled(false).addWelcomeFiles("graphiql.html"));
 
             GraphqlHttpHandler graphqlHttpHandler = new GraphqlHttpHandler(graphQL);

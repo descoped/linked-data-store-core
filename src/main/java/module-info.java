@@ -6,7 +6,7 @@ module io.descoped.lds.core {
     requires no.cantara.saga.api;
     requires no.cantara.saga.execution;
     requires no.cantara.sagalog;
-    requires no.ssb.rawdata.api;
+    requires io.descoped.rawdata.api;
     requires de.huxhorn.sulky.ulid;
     requires jdk.unsupported;
     requires java.base;
@@ -34,7 +34,7 @@ module io.descoped.lds.core {
     provides io.descoped.lds.api.search.SearchIndexProvider with io.descoped.lds.core.search.TestSearchIndex;
 
     uses io.descoped.lds.api.persistence.PersistenceInitializer;
-    uses no.ssb.rawdata.api.RawdataClientInitializer;
+    uses io.descoped.rawdata.api.RawdataClientInitializer;
     uses io.descoped.lds.api.search.SearchIndexProvider;
     uses no.cantara.sagalog.SagaLogInitializer;
 

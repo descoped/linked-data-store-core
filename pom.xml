@@ -132,16 +132,18 @@
         </dependency>
 
         <dependency>
-            <groupId>no.ssb.rawdata</groupId>
+            <groupId>io.descoped.rawdata</groupId>
             <artifactId>rawdata-client-api</artifactId>
         </dependency>
+        <!--
         <dependency>
-            <groupId>no.ssb.rawdata</groupId>
+            <groupId>io.descoped.rawdata</groupId>
             <artifactId>rawdata-client-provider-lmdb</artifactId>
             <scope>test</scope>
         </dependency>
+        -->
         <dependency>
-            <groupId>no.ssb.rawdata</groupId>
+            <groupId>io.descoped.rawdata</groupId>
             <artifactId>rawdata-client-provider-postgres</artifactId>
             <scope>test</scope>
         </dependency>

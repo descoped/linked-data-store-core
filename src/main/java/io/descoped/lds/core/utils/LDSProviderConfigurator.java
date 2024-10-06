@@ -1,7 +1,7 @@
 package io.descoped.lds.core.utils;
 
-import no.ssb.service.provider.api.ProviderInitializer;
-import no.ssb.service.provider.api.ProviderName;
+import io.descoped.service.provider.api.ProviderInitializer;
+import io.descoped.service.provider.api.ProviderName;
 
 import java.util.LinkedHashSet;
 import java.util.List;
