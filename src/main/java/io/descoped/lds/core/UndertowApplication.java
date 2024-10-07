@@ -1,6 +1,5 @@
 package io.descoped.lds.core;
 
-import com.netflix.hystrix.HystrixThreadPoolProperties;
 import graphql.GraphQL;
 import graphql.schema.GraphQLSchema;
 import graphql.schema.idl.SchemaParser;
@@ -305,7 +304,7 @@ public class UndertowApplication {
 
         SagaExecutionCoordinator sec = new SagaExecutionCoordinator(sagaLogPool, numberOfSagaLogs, sagaRepository, sagasObserver, sagaThreadPool, sagaCommandsEnabled, recoveryThreadPool);
 
-        HystrixThreadPoolProperties.Setter().withMaximumSize(50); // TODO Configure Hystrix properly
+        /* Removed Hystrix thread pool initialization - can be replaced with Resilience4j if needed. Init goes here. */
 
         LOG.info("Initializing saga-recovery-trigger ...");
 
